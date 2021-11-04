@@ -9,16 +9,14 @@
     <header th:replace="header.html :: top">
         Your header here
     </header>
-<form method="get" action="doctor">
+<form method="get" th:action="${action}">
     <fieldset>
         <label for="name">Your doctor's name: </label>
-        <!--<input id="name" th:field="*{name}" name="name" type="text" placeholder="Your name here">:-->
-        <input id="name" name="name" type="text" placeholder="Your name here">
+        <input id="name" name="name" type="text" placeholder="Your name here">:-->
         <hr>
         <label for="number">Your doctor's number: </label>
         <input id="number" name="number" type="number" placeholder="0">
         <hr>
-        <!--<a th:href="@{/doctor(name=${name},number=${number})}">Sign In Here</a>:-->
         <input type="submit" value="Sign In">
     </fieldset>
 </form>
